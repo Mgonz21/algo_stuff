@@ -4,7 +4,7 @@ function chunkArrayInGroups(arr, size) {
   let newArr = [];
   for(let i = 0; i<arr.length; i=i + size){
     newArr.push(arr.slice(i, i+size));
-  } console.log(newArr);
+  }return newArr;
 }
 
 //what does it do? i = 0 pushes contents of arr[0] to arr[0+2] into newArr at position i, which is 0. So newArr becomes newArr[["a,b"]]. then, loop i=0+size, so i=2 pushes arr[2] to arr[2+2] to position i, which is now 2;. So newArr[["a","b"]] becomes newArr[["a","b"],["c","d"]], terminating next step because i=2+2= 4, and i<arr.length = 4<4.
